@@ -1,4 +1,4 @@
-votre_nom_de_projet:
+intro-dbt-snowflake:
   target: dev
   outputs:
     dev:
