@@ -17,4 +17,13 @@ clean-targets:
 
 models:
   intro_dbt_snowflake:
+    # Par défaut, tout est une vue (plus sécurisé)
     +materialized: view
+    
+    staging:
+      # Tout ce qui est dans le dossier staging reste en vue
+      +materialized: view
+      
+    marts:
+      # Tout ce qui est dans le dossier marts devient une table physique
+      +materialized: table
